@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel - Tambah Artikel</title>
+    <style>
+        /* Styling tetap sama seperti yang diberikan */
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
+        
+        nav ul {
+            list-style: none;
+            background-color: #444;
+            text-align: center;
+            margin: 0;
+            padding: 10px 0;
+        }
+        
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+        
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+        }
+        
+        nav ul li a:hover {
+            color: #ff6f61;
+        }
+        
+        section {
+            padding: 20px;
+            margin: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        form label {
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #555;
+        }
+        
+        form input,
+        form textarea,
+        form select {
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 14px;
+            color: #555;
+        }
+        
+        form button {
+            padding: 10px 20px;
+            border: none;
+            background-color: #ff6f61;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+        
+        form button:hover {
+            background-color: #ff4e47;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            background-color: #333;
+            color: white;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Admin Panel - Tambah Artikel</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="tutorial.html">Tutorial</a></li>
+            <li><a href="beckend.html">Backend</a></li>
+            <li><a href="frontend.html">Frontend</a></li>
+            <li><a href="Database.html">Database</a></li>
+            <li><a href="Buku.html">Buku</a></li>
+            <li><a href="artikel1.html">Artikel 1</a></li>
+            <li><a href="artikel2.html">Artikel 2</a></li>
+            <li><a href="artikel3.html">Artikel 3</a></li>
+        </ul>
+    </nav>
+
+    <section>
+        <h2>Tambah Baru</h2>
+        <form method="POST" action="process_upload.php" enctype="multipart/form-data">
+            <label for="judul">Judul:</label>
+            <input type="text" id="judul" name="judul" required>
+
+            <label for="konten">Konten:</label>
+            <textarea id="konten" name="konten" rows="10" required></textarea>
+
+            <label for="halaman">Pilih Halaman:</label>
+            <select id="halaman" name="halaman" required>
+                <option value="beckend.html">Backend</option>
+                <option value="frontend.html">Frontend</option>
+                <option value="Database.html">Database</option>
+                <option value="Buku.html">Buku</option>
+                <option value="artikel1.html">Artikel 1</option>
+                <option value="artikel2.html">Artikel 2</option>
+                <option value="artikel3.html">Artikel 3</option>
+            </select>
+
+            <label for="fileUpload">Pilih File:</label>
+            <input type="file" name="fileUpload" id="fileUpload">
+
+            <button type="submit">Tambah</button>
+        </form>
+
+    </section>
+</body>
+
+</html>

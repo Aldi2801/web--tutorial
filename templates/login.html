@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - RuangTutorial</title>
+    <style>
+        /* Styling dasar untuk tampilan login */
+        
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #3498db;
+        }
+        
+        .login-box {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            max-width: 300px;
+            width: 100%;
+        }
+        
+        .login-box input {
+            display: block;
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin: 10px 0;
+            font-size: 1em;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+        
+        .login-box button {
+            padding: 10px;
+            width: 100%;
+            border: none;
+            color: white;
+            background-color: #2980b9;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="login-box">
+        <h2>Login</h2>
+        <input type="text" id="username" placeholder="Username">
+        <input type="password" id="password" placeholder="Password">
+        <button onclick="login()">Login</button>
+    </div>
+
+    <script>
+        function login() {
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            // Validasi username dan password
+            if (username === "12345678" && password === "12345678") {
+                // Jika berhasil login, tampilkan pesan dan arahkan ke halaman dashboard.html
+                alert("Login berhasil!");
+                window.location.href = "/tutorial"; // Redirect to dashboard page
+            } else if (username === "user" && password === "user1234") {
+                // Jika berhasil login, tampilkan pesan dan arahkan ke halaman dashboard.html
+                alert("Login berhasil!");
+                window.location.href = "/tutorial"; // Redirect to dashboard page
+            } else if (username === "admin" && password === "admin1234") {
+                // Jika berhasil login, tampilkan pesan dan arahkan ke halaman dashboard.html
+                alert("Login berhasil!");
+                window.location.href = "/admin"; // Redirect to dashboard page
+            } else {
+                // Jika username atau password salah
+                alert("Username atau password salah.");
+            }
+        }
+    </script>
+</body>
+
+</html>

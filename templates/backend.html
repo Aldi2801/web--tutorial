@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutorial Backend</title>
+    <style>
+        /* Reset default margin and padding */
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        header {
+            background-color: rgba(52, 152, 219, 0.8);
+            color: white;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            background-image: url('path-to-image.jpg');
+            /* Ganti dengan URL/path gambar yang benar */
+            background-size: cover;
+            background-position: center;
+        }
+        
+        header h1 {
+            display: inline-block;
+            animation: slide 3s infinite alternate;
+        }
+        
+        @keyframes slide {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(20px);
+            }
+        }
+        
+        nav {
+            background-color: #2980b9;
+            padding: 10px;
+            position: relative;
+            /* Memastikan z-index diterapkan */
+            z-index: 1000;
+            /* Menjamin menu navigasi di atas elemen lainnya */
+        }
+        
+        nav ul {
+            list-style-type: none;
+            display: flex;
+            justify-content: center;
+        }
+        
+        nav ul li {
+            margin: 0 15px;
+            position: relative;
+        }
+        
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 8px 15px;
+            transition: background 0.3s;
+        }
+        
+        nav ul li a:hover {
+            background-color: #1abc9c;
+            border-radius: 4px;
+        }
+        
+        nav ul li ul {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #2980b9;
+            min-width: 200px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+            z-index: 1001;
+        }
+        
+        nav ul li:hover>ul {
+            display: block;
+        }
+        
+        nav ul li ul li {
+            padding: 10px;
+        }
+        
+        nav ul li ul li a {
+            padding: 8px 15px;
+            color: white;
+            font-weight: normal;
+        }
+        
+        nav ul li ul li a:hover {
+            background-color: #1abc9c;
+        }
+        
+        .video-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+            padding: 20px;
+            position: relative;
+            z-index: 1;
+            /* Memastikan video tidak menimpa menu */
+        }
+        
+        .video {
+            background-color: #f4f4f4;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+            transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            border: 5px solid transparent;
+            background-image: linear-gradient(white, white), linear-gradient(45deg, #3498db, #2ecc71);
+            background-origin: border-box;
+            background-clip: content-box, border-box;
+        }
+        
+        .video:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            border-color: #1abc9c;
+        }
+        
+        .video iframe {
+            width: 100%;
+            height: 200px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+        
+        .video .text {
+            font-size: 16px;
+            color: #34495e;
+            font-weight: bold;
+        }
+        
+        .content {
+            padding: 20px;
+            text-align: center;
+        }
+        
+        #about {
+            text-align: center;
+            margin-top: 40px;
+            color: #333;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #2980b9;
+            color: white;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Selamat Datang di Tutorial Backend</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="tutorial.html">Tutorial</a>
+                <ul>
+                    <li><a href="beckend.html">Backend</a></li>
+                    <li><a href="frontend.html">Frontend</a></li>
+                    <li><a href="database.html">Database</a></li>
+                </ul>
+            </li>
+            <li><a href="ruangbaca.html">Ruang Baca</a>
+                <ul>
+                    <li><a href="buku.html">Buku</a></li>
+                    <li><a href="artikel.html">Artikel</a></li>
+                </ul>
+            </li>
+            <li><a href="tentang.html">Tentang</a></li>
+            <li><a href="kontak.html">Kontak</a></li>
+        </ul>
+    </nav>
+
+    <div id="ruangbaca" class="content">
+        <div class="video-container">
+            <div class="video">
+                <iframe src="https://www.youtube.com/embed/jQ8QnEVvBjY" allowfullscreen></iframe>
+                <div class="text">
+                    <h2>Membuat aplikasi dengan Ruby on Rails</h2>
+                </div>
+            </div>
+            <div class="video">
+                <iframe src="https://www.youtube.com/embed/YYjb_RszQYY" allowfullscreen></iframe>
+                <div class="text">
+                    <h2>Membuat server dengan Gin atau Fiber</h2>
+                </div>
+            </div>
+            <div class="video">
+                <iframe src="https://www.youtube.com/embed/k2QmYNMhXRg" allowfullscreen></iframe>
+                <div class="text">
+                    <h2>Konsep Pengembangan Backend</h2>
+                </div>
+            </div>
+            <div class="video">
+                <iframe src="https://www.youtube.com/embed/qBTe6uHJS_Y" allowfullscreen></iframe>
+                <div class="text">
+                    <h2>Pengembangan backend dengan ASP.NET Core</h2>
+                </div>
+            </div>
+            <div class="video">
+                <iframe src="https://www.youtube.com/embed/WmR9IMUD_CY" allowfullscreen></iframe>
+                <div class="text">
+                    <h2>WebSocket: Membangun komunikasi real-time</h2>
+                </div>
+            </div>
+            <div class="video">
+                <iframe src="https://www.youtube.com/embed/YIBDd-nG3hc" allowfullscreen></iframe>
+                <div class="text">
+                    <h2>Pengelolaan caching (Redis, Memcached)</h2>
+                </div>
+            </div>
+            <div class="video">
+                <iframe src="https://www.youtube.com/embed/kZxgMRYEgaI" allowfullscreen></iframe>
+                <div class="text">
+                    <h2>RESTful API: Prinsip dasar REST</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="about">
+        <h3>Tentang Kami</h3>
+        <p>Kami menyediakan sumber belajar online berupa tutorial, buku, dan artikel.</p>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 RuangBaca. Semua hak cipta dilindungi.</p>
+    </footer>
+</body>
+
+</html>

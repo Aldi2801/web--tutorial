@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artikel</title>
+    <style>
+        /* Reset default margin and padding */
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        /* Header */
+        
+        header {
+            background-color: rgba(52, 152, 219, 0.8);
+            color: white;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        /* Navigation Menu */
+        
+        nav {
+            background-color: #2980b9;
+            padding: 10px;
+        }
+        
+        nav ul {
+            list-style-type: none;
+            display: flex;
+            justify-content: center;
+        }
+        
+        nav ul li {
+            margin: 0 15px;
+            position: relative;
+        }
+        
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 8px 15px;
+            transition: background 0.3s;
+        }
+        
+        nav ul li a:hover {
+            background-color: #1abc9c;
+            border-radius: 4px;
+        }
+        /* Dropdown Menu */
+        
+        nav ul li ul {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #2980b9;
+            min-width: 200px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+        }
+        
+        nav ul li:hover>ul {
+            display: block;
+        }
+        
+        nav ul li ul li {
+            padding: 10px;
+        }
+        
+        nav ul li ul li a {
+            padding: 8px 15px;
+            color: white;
+            font-weight: normal;
+        }
+        
+        nav ul li ul li a:hover {
+            background-color: #1abc9c;
+        }
+        /* Main Content */
+        
+        .content {
+            padding: 20px;
+        }
+        /* Book Section */
+        
+        .book-section {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+        
+        .book-card {
+            background-color: #f4f4f4;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+        
+        .book-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .book-card img {
+            max-width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+        
+        .book-card h3 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+        
+        .book-card p {
+            color: #555;
+            margin-bottom: 15px;
+        }
+        
+        .book-card a {
+            display: inline-block;
+            padding: 10px 15px;
+            background-color: #2980b9;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+        
+        .book-card a:hover {
+            background-color: #1abc9c;
+        }
+        /* About Section */
+        
+        #about {
+            text-align: center;
+            margin-top: 40px;
+            color: #333;
+        }
+        /* Footer */
+        
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #2980b9;
+            color: white;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>Artikel</h1>
+    </header>
+
+    <!-- Navigation Menu -->
+    <nav>
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li>
+                <a href="tutorial.html">Tutorial</a>
+                <ul>
+                    <li><a href="frontend.html">Frontend</a></li>
+                    <li><a href="backend.html">Backend</a></li>
+                    <li><a href="database.html">Database</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="ruangbaca.html">RuangBaca</a>
+                <ul>
+                    <li><a href="buku.html">Buku</a></li>
+                    <li><a href="Artikel.html">Article</a></li>
+                </ul>
+            </li>
+            <li><a href="tentang.html">Tentang</a></li>
+            <li><a href="kontak.html">Kontak</a></li>
+        </ul>
+    </nav>
+
+    <!-- Content Section -->
+    <div id="home" class="content">
+        <h2>Selamat datang di Website Artikel</h2>
+        <p>Tempat yang tepat untuk membaca artikel secara gratis. Temukan berbagai bacaan menarik di sini!</p>
+    </div>
+
+    <!-- Book Section -->
+    <div id="ruangbaca" class="content">
+        <h2>Daftar Artikel</h2>
+        <div class="book-section">
+            <!-- Book 1 -->
+            <div class="book-card">
+                <img src="https://smanegeri2cibitung.sch.id/wp-content/uploads/2023/03/Manfaat-Belajar-Bahasa-Inggris-untuk-Pelajar-yang-Wajib-Diketahui.jpg" alt="Artikel 1">
+                <h3>Bahasa Inggris: 5 Materi Dasar Belajar Bahasa Inggris untuk Pemula yang Efektif</h3>
+                <p>Silahkan Pelajari Dan Baca artikel lengkap ini.</p>
+                <a href="https://blog.cakap.com/dasar-belajar-bahasa-inggris/">Baca Artikel</a>
+            </div>
+
+            <!-- Book 2 -->
+            <div class="book-card">
+                <img src="https://s3.ap-southeast-1.amazonaws.com/indosistem/smpnegeri2medangderas/aEMzaFRkN1p5aEZGNnlGSlFYbWRzTTdZMnFld2FLU25MU0JxN3J6Rk51bz0=-197.jpg" alt="Artikel 2">
+                <h3>Bahasa Inggris: 99 Kumpulan Materi Bahasa Inggris Dasar & Lanjutan Terbaru</h3>
+                <p>Silahkan Pelajari Dan Baca artikel lengkap ini.</p>
+                <a href="https://blog.cakap.com/materi-bahasa-inggris/">Baca Artikel</a>
+            </div>
+
+            <!-- Book 3 -->
+            <div class="book-card">
+                <img src="data:image/jpeg;base64,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"
+                    alt="Artikel 3">
+                <h3>Bahasa Inggris: Rumus 16 Tenses Bahasa Inggris dan Contohnya</h3>
+                <p>Silahkan Pelajari Dan Baca artikel lengkap ini.</p>
+                <a href="https://blog.cakap.com/belajar-16-tenses-bahasa-inggris/">Baca Artikel</a>
+            </div>
+
+            <!-- Book 4 -->
+            <div class="book-card">
+                <img src="https://media.licdn.com/dms/image/C5612AQEynmy_E5L8hA/article-cover_image-shrink_720_1280/0/1630607281731?e=2147483647&v=beta&t=XfMBf-SKK4cwvJaNgtNCmG4yWxVWWvGGQOxpZqcbqzM" alt="Artikel 4">
+                <h3>Bahasa Inggris: 15 Contoh Percakapan Bahasa Inggris Singkat Sehari-hari</h3>
+                <p>Silahkan Pelajari Dan Baca artikel lengkap ini.</p>
+                <a href="https://blog.cakap.com/percakapan-bahasa-inggris/">Baca Artikel</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <div id="about" class="content">
+        <h2>Tentang RuangBaca</h2>
+        <p>RuangBaca adalah platform yang menyediakan berbagai buku dan artikel untuk dibaca secara gratis. Dapatkan wawasan baru dan pelajari keterampilan baru melalui berbagai topik yang tersedia di sini.</p>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 RuangBaca. Semua Hak Dilindungi.</p>
+    </footer>
+
+</body>
+
+</html>

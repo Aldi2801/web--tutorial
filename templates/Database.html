@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutorial Database</title>
+    <style>
+        /* Reset default margin and padding */
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        header {
+            background-color: rgba(52, 152, 219, 0.8);
+            color: white;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            /* Perbaikan gambar di sini, pastikan URL gambar benar */
+            background-image: url('https://example.com/path-to-your-image.jpg');
+            /* Ganti URL dengan gambar yang valid */
+            background-size: cover;
+            background-position: center;
+        }
+        
+        header h1 {
+            display: inline-block;
+            animation: slide 3s infinite alternate;
+        }
+        
+        @keyframes slide {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(20px);
+            }
+        }
+        /* Navigation Menu */
+        
+        nav {
+            background-color: #2980b9;
+            padding: 10px 0;
+            position: relative;
+        }
+        
+        nav ul {
+            list-style-type: none;
+            display: flex;
+            justify-content: center;
+        }
+        
+        nav ul li {
+            margin: 0 15px;
+            position: relative;
+        }
+        
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 8px 15px;
+            transition: background 0.3s;
+        }
+        
+        nav ul li a:hover {
+            background-color: #1abc9c;
+            border-radius: 4px;
+        }
+        /* Dropdown Menu */
+        
+        nav ul li ul {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #2980b9;
+            min-width: 200px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+        }
+        
+        nav ul li:hover>ul {
+            display: block;
+        }
+        
+        nav ul li ul li {
+            padding: 10px;
+        }
+        
+        nav ul li ul li a {
+            padding: 8px 15px;
+            color: white;
+            font-weight: normal;
+        }
+        
+        nav ul li ul li a:hover {
+            background-color: #1abc9c;
+        }
+        /* Video Section */
+        
+        .video-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+            padding: 20px;
+        }
+        
+        .video {
+            background-color: #f4f4f4;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+            transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            border: 5px solid transparent;
+            background-image: linear-gradient(white, white), linear-gradient(45deg, #3498db, #2ecc71);
+            background-origin: border-box;
+            background-clip: content-box, border-box;
+        }
+        
+        .video:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            border-color: #1abc9c;
+        }
+        
+        .video iframe {
+            width: 100%;
+            height: 200px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+        
+        .video .text {
+            font-size: 16px;
+            color: #34495e;
+            font-weight: bold;
+            text-align: center;
+        }
+        /* Main Content */
+        
+        .content {
+            padding: 20px;
+            text-align: center;
+        }
+        
+        #about {
+            text-align: center;
+            margin-top: 40px;
+            color: #333;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #2980b9;
+            color: white;
+            margin-top: 40px;
+        }
+        /* Responsive Menu */
+        
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            nav ul li {
+                margin-bottom: 10px;
+            }
+            nav ul li ul {
+                position: relative;
+                top: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <h1>Selamat Datang Di Tutorial Database</h1>
+    </header>
+
+    <!-- Navigation Menu -->
+    <nav>
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="tutorial.html">Tutorial</a>
+                <ul>
+                    <li><a href="beckend.html">Backend</a></li>
+                    <li><a href="Frontend.html">Frontend</a></li>
+                    <li><a href="Database.html">Database</a></li>
+                </ul>
+            </li>
+            <li><a href="ruangbaca.html">RuangBaca</a>
+                <ul>
+                    <li><a href="buku.html">Buku</a></li>
+                    <li><a href="artikel.html">Artikel</a></li>
+                </ul>
+            </li>
+            <li><a href="tentang.html">Tentang</a></li>
+            <li><a href="kontak.html">Kontak</a></li>
+        </ul>
+    </nav>
+
+    <!-- Video Section -->
+    <div id="ruangbaca" class="content">
+        <div class="video-container">
+            <div class="video">
+                <!-- Perbaikan video URL agar dapat muncul -->
+                <iframe src="https://www.youtube.com/embed/BfwEPIOKTsg" allowfullscreen></iframe>
+                <div class="text">
+                    <h2>Tutorial: tutorial dasar dasar database</h2>
+                </div>
+            </div>
+            <div class="video">
+                <iframe src="https://www.youtube.com/embed/S4igMZFCvh8" allowfullscreen></iframe>
+                <div class="text">
+                    <h2>Tutorial: Tutorial Database Relasional</h2>
+                </div>
+            </div>
+            <div class="video">
+                <iframe src="https://www.youtube.com/embed/JXXUBiJGu94" allowfullscreen></iframe>
+                <div class="text">
+                    <h2>Tutorial: Tutorial Database NoSQL</h2>
+                </div>
+            </div>
+            <div class="video">
+                <iframe src="https://www.youtube.com/embed/FFVMdxd36h4" allowfullscreen></iframe>
+                <div class="text">
+                    <h2>Tutorial: Optimisasi Query</h2>
+                </div>
+            </div>
+            <div class="video">
+                <iframe src="https://www.youtube.com/embed/pccWGMEV-Jo" allowfullscreen></iframe>
+                <div class="text">
+                    <h2>Tutorial: Transaksi dan ACID</h2>
+                </div>
+            </div>
+            <div class="video">
+                <iframe src="https://www.youtube.com/embed/SI98iVL-DNc" allowfullscreen></iframe>
+                <div class="text">
+                    <h2>Tutorial: Backup dan Recovery Strategi cadangan</h2>
+                </div>
+            </div>
+            <div class="video">
+                <iframe src="https://www.youtube.com/embed/rWndSLKEegw" allowfullscreen></iframe>
+                <div class="text">
+                    <h2>Tutorial: Pentingnya SQL Security</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <div id="about">
+        <h3>Tentang Kami</h3>
+        <p>Kami adalah platform yang menyediakan berbagai sumber daya belajar online dalam bentuk tutorial, buku, dan artikel.</p>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 RuangBaca. Semua hak cipta dilindungi.</p>
+    </footer>
+</body>
+
+</html>

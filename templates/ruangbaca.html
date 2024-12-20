@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RuangBaca - Buku dan Artikel</title>
+    <style>
+        /* Reset default margin and padding */
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        /* Header */
+        
+        header {
+            background-color: rgba(52, 152, 219, 0.8);
+            color: white;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        /* Navigation Menu */
+        
+        nav {
+            background-color: #2980b9;
+            padding: 10px;
+        }
+        
+        nav ul {
+            list-style-type: none;
+            display: flex;
+            justify-content: center;
+        }
+        
+        nav ul li {
+            margin: 0 15px;
+            position: relative;
+        }
+        
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 8px 15px;
+            transition: background 0.3s;
+        }
+        
+        nav ul li a:hover {
+            background-color: #1abc9c;
+            border-radius: 4px;
+        }
+        /* Dropdown Menu */
+        
+        nav ul li ul {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #2980b9;
+            min-width: 200px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+        }
+        
+        nav ul li:hover>ul {
+            display: block;
+        }
+        
+        nav ul li ul li {
+            padding: 10px;
+        }
+        
+        nav ul li ul li a {
+            padding: 8px 15px;
+            color: white;
+            font-weight: normal;
+        }
+        
+        nav ul li ul li a:hover {
+            background-color: #1abc9c;
+        }
+        /* Main Content */
+        
+        .content {
+            padding: 20px;
+        }
+        /* About Section */
+        
+        #about {
+            text-align: center;
+            margin-top: 40px;
+            color: #333;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #2980b9;
+            color: white;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>RuangBaca - Buku dan Artikel</h1>
+    </header>
+
+    <!-- Navigation Menu -->
+    <nav>
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <!-- Dropdown for Tutorial -->
+            <li><a href="tutorial.html">Tutorial</a>
+                <ul>
+                    <li>
+                        <a href="beckend.html">Beckend</a>
+                    </li>
+                    <li>
+                        <a href="frontend.html">Frontend</a>
+                    </li>
+                    <li><a href="Database.html">Database</a></li>
+                </ul>
+            </li>
+            <li><a href="ruangbaca.html">RuangBaca</a>
+                <ul>
+                    <li><a href="buku.html">Buku</a></li>
+                    <li><a href="artikel.html">Artikel</a></li>
+                </ul>
+            </li>
+            <li><a href="tentang.html">Tentang</a></li>
+            <li><a href="kontak.html">Kontak</a></li>
+        </ul>
+    </nav>
+
+    <!-- Content Section -->
+    <div id="home" class="content">
+        <h2>Selamat datang di RuangBaca!</h2>
+        <p>Tempat yang tepat untuk membaca buku dan artikel secara gratis. Temukan berbagai bacaan menarik di sini!</p>
+    </div>
+</body>
+
+</html>

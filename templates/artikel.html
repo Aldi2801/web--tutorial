@@ -1,0 +1,224 @@
+
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Artikel</title>
+    <style>
+        /* Global Styles */
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f4f8;
+        }
+        /* Header Styles */
+        
+        header {
+            background-color: #3498db;
+            /* Warna biru */
+            color: white;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        header h1 {
+            font-size: 28px;
+            letter-spacing: 1.5px;
+            animation: slide 3s infinite alternate;
+            margin: 0;
+        }
+        /* Animation for Header */
+        
+        @keyframes slide {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(8px);
+            }
+        }
+        /* Navigation Styles */
+        
+        nav {
+            background-color: #2980b9;
+            /* Warna biru tua */
+            padding: 10px 0;
+            text-align: center;
+        }
+        
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: inline-flex;
+        }
+        
+        nav ul li {
+            margin-right: 20px;
+        }
+        
+        nav ul li:last-child {
+            margin-right: 0;
+        }
+        
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            padding: 8px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+        
+        nav ul li a:hover {
+            background-color: #3498db;
+            transform: scale(1.05);
+        }
+        /* Article Section */
+        
+        #kontenArtikel {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 15px;
+            padding: 20px;
+            margin: 0 10px;
+        }
+        
+        .artikelCard {
+            background-color: white;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .artikelCard:hover {
+            transform: translateY(-8px);
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+        }
+        
+        .artikelCard h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+        
+        .artikelCard p {
+            font-size: 14px;
+            color: #7f8c8d;
+            line-height: 1.5;
+            margin: 0;
+        }
+        /* Footer Styles */
+        
+        footer {
+            background-color: #2c3e50;
+            /* Warna biru tua */
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+        
+        footer p {
+            font-size: 13px;
+            margin: 0;
+        }
+        /* Responsive Design */
+        
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+            }
+            #kontenArtikel {
+                grid-template-columns: 1fr;
+                padding: 15px;
+            }
+            .artikelCard {
+                padding: 15px;
+            }
+        }
+        /* Style tambahan untuk teks pengantar */
+        
+        .intro-text {
+            text-align: center;
+            font-size: 18px;
+            color: #2c3e50;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <h1>Menu Artikel</h1>
+    </header>
+
+    <!-- Navigation Menu -->
+    <nav>
+        <ul id="menuArtikel">
+            <li><a href="artikel1.html">Artikel 1</a></li>
+            <li><a href="artikel2.html">Artikel 2</a></li>
+            <li><a href="artikel3.html">Artikel 3</a></li>
+        </ul>
+    </nav>
+
+    <!-- Introductory Text -->
+    <div class="intro-text">
+        Silakan pilih salah satu menu yang ingin Anda baca. Semoga bermanfaat!
+    </div>
+
+    <!-- Article Content -->
+    <section id="kontenArtikel">
+        <div class="artikelCard" onclick="tampilkanArtikel(1)">
+            <h3>Artikel 1: Mengenal Apa itu Pendidikan</h3>
+            <p>Proses pembelajaran dan pengajaran yang bertujuan untuk mengembangkan pengetahuan, keterampilan, sikap, dan nilai-nilai individu.</p>
+        </div>
+        <div class="artikelCard" onclick="tampilkanArtikel(2)">
+            <h3>Artikel 2: Mengenal Apa itu Kesehatan dan Bagaimana Menjaga Kesehatan</h3>
+            <p>Keadaan fisik, mental, dan sosial yang sejahtera, bukan hanya bebas dari penyakit atau kelemahan. Definisi ini diadopsi oleh Organisasi Kesehatan Dunia (WHO).</p>
+        </div>
+        <div class="artikelCard" onclick="tampilkanArtikel(3)">
+            <h3>Artikel 3: Seberapa Penting Bahasa Inggris di Zaman Sekarang?</h3>
+            <p>Bahasa Inggris sangat penting di era sekarang karena berbagai alasan yang berkaitan dengan kemajuan teknologi, globalisasi, dan interaksi lintas budaya.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Ruang Baca. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript Function -->
+    <script>
+        function tampilkanArtikel(id) {
+            let url = '';
+            switch (id) {
+                case 1:
+                    url = "artikel1.html";
+                    break;
+                case 2:
+                    url = "artikel2.html";
+                    break;
+                case 3:
+                    url = "artikel3.html";
+                    break;
+                default:
+                    url = "#";
+                    break;
+            }
+            window.location.href = url;
+        }
+    </script>
+</body>
+
+</html>
